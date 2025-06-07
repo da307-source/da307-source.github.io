@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TelecomCom</title>
+  <style>
+    body { font-family: sans-serif; padding: 20px; line-height: 1.6; background: #f4f4f4; }
+    .lang-switch { position: absolute; top: 20px; right: 20px; }
+    .box { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+  </style>
+</head>
+<body>
+  <div class="lang-switch">
+    <button onclick="switchLang('fr')">🇫🇷 Français</button>
+    <button onclick="switchLang('ar')">🇩🇿 عربي</button>
+  </div>
+  <div class="box">
+    <h1 id="title">Bienvenue chez TelecomCom</h1>
+    <p id="desc">Votre bureau d’étude en télécommunications basé à Biskra.</p>
+  </div>
+
+  <script>
+    const translations = {
+      fr: {
+        title: "Bienvenue chez TelecomCom",
+        desc: "Votre bureau d’étude en télécommunications basé à Biskra."
+      },
+      ar: {
+        title: "مرحبًا بكم في TelecomCom",
+        desc: "مكتب دراسات في مجال الاتصالات مقره بسكرة."
+      }
+    };
+
+    function switchLang(lang) {
+      document.getElementById("title").innerText = translations[lang].title;
+      document.getElementById("desc").innerText = translations[lang].desc;
+    }
+  </script>
+</body>
+</html>
